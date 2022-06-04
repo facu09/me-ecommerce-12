@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 //Primero pongo las rutas de mis endpoints
 app.use("/api", (req, res, next)=> {
-    res.send("Hellow api");
+    res.send("Hellowis aca accedió a la: api.  :)");
 });
 
 //Luego que sirva la aplicación de React

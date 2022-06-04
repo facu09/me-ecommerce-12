@@ -11,7 +11,7 @@ app.use("/api", (req, res, next)=> {
 
 //Luego que sirva la aplicación de React
 const PATH = path.join(__dirname, "..", "client", "build");
-console.log(PATH);
+console.log("Path: " + PATH);
 app.use(express.static(PATH));
 
 //Luego que sirva la aplicación de React

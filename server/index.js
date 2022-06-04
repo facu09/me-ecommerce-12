@@ -18,5 +18,5 @@ app.use(express.static(PATH));
 //app.use("/*", express.static(path.join(__dirname + "/../" + "client/" + "public")));
 
 app.listen(PORT, () => {
-    console.log(`Listening on PORT ${PORT}`);
+    console.log(`Listening - Escuchando - on PORT: ${PORT}`);
 });

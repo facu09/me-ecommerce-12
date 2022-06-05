@@ -1,8 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Router from "./Router/Router";
 
 function App() {
   return (
+<<<<<<< HEAD
+    <div className='App'>
+      <Router/>      
+=======
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,8 +22,9 @@ function App() {
           Learn React Please Please Please Yeap !!
         </a>
       </header>
+>>>>>>> 1920c6551eacf186ca5455b95e4b91d1838fda20
     </div>
   );
-}
+};
 
 export default App;

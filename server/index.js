@@ -12,10 +12,17 @@ app.use("/api", (req, res, next)=> {
 //Luego que sirva la aplicación de React
 const PATH = path.join(__dirname, "..", "client", "build");
 console.log("Path: " + PATH);
+
+//Luego que sirva la aplicación de React del BUILD (hecho con el "npm run build")
 app.use(express.static(PATH));
 
-//Luego que sirva la aplicación de React
-//app.use("/*", express.static(path.join(__dirname + "/../" + "client/" + "public")));
+//esto fue la forma de resolver el quilombo 
+// ==>  tengo que preguntar que es get diferencia del get y que significa el "/*"
+app.get("/*", function(req, res) {
+    res.sendFile(PATH + "/index.html")
+})
+
+
 
 app.listen(PORT, () => {
     console.log(`Listening - Escuchando - on PORT: ${PORT}`);

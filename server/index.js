@@ -9,11 +9,9 @@ app.use("/api", (req, res, next)=> {
     res.send("Hellowis aca accedió a la: api.  :)");
 });
 
-//Luego que sirva la aplicación de React
+//Luego que sirva la aplicación de React, del BUILD (hecho con el "npm run build")
 const PATH = path.join(__dirname, "..", "client", "build");
 console.log("Path: " + PATH);
-
-//Luego que sirva la aplicación de React del BUILD (hecho con el "npm run build")
 app.use(express.static(PATH));
 
 //esto fue la forma de resolver el quilombo 
@@ -21,7 +19,6 @@ app.use(express.static(PATH));
 app.get("/*", function(req, res) {
     res.sendFile(PATH + "/index.html")
 })
-
 
 
 app.listen(PORT, () => {

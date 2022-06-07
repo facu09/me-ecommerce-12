@@ -8,8 +8,10 @@
 # testing
 /coverage
 
+# Esto lina la comento porque sino no va a tirar build arriba al GitHub y por ende 
+#     no va deplyar en Heroku ==> por en no va andar.
 # production
-/build
+#/build
 
 # misc
 .DS_Store
